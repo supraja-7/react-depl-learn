@@ -1,0 +1,8 @@
+services:
+  react-proj:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - 4000:3000
