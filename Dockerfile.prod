@@ -4,11 +4,11 @@ FROM node AS builder
 
 WORKDIR /app
 
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY ./ ./
 
 RUN npm run build
 # stage 2
@@ -18,6 +18,6 @@ WORKDIR /app/build
 
 RUN npm install -g http-server
 
-COPY --from=builder /app/build /app/build
+COPY --from=builder /app/build/ /app/build/
 
 CMD http-server
