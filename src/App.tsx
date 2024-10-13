@@ -9,6 +9,9 @@ function App() {
   const handleIncrement = () =>{
     setCounter(val => val + 1)
   }
+const handleDecrement =()=>{
+    setCounter(val => val - 1)
+  }
 
   return (
     <div className="App">
